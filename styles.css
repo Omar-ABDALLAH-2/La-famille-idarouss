@@ -1,0 +1,142 @@
+/* Styles pour le corps de la page */
+@keyframes backgroundAnimation {
+    0% { background: linear-gradient(to top left, red, orange, yellow, green, blue, indigo, violet); }
+    100% { background: linear-gradient(to bottom right, violet, indigo, blue, green, yellow, orange, red); }
+}
+
+body {
+    font-family: Arial, sans-serif;
+    animation: backgroundAnimation 10s infinite alternate; /* Animation de l'arrière-plan */
+    color: white; /* Couleur du texte */
+    margin: 0;
+    padding: 0;
+}
+
+/* Styles pour les titres */
+h1, h2, h3 {
+    text-align: center;
+    color: white; /* Couleur du texte */
+}
+
+/* Styles pour les liens */
+a {
+    color: #007bff; /* Couleur du lien */
+}
+
+a:hover {
+    text-decoration: underline; /* Effet au survol */
+}
+
+/* Styles pour les conteneurs */
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    color: white; /* Couleur du texte */
+}
+
+/* Styles pour les images */
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto 20px;
+}
+
+/* Styles pour la vidéo */
+video {
+    display: block;
+    margin: 0 auto 20px;
+    width: 100%;
+}
+
+/* Styles pour les paragraphes */
+p {
+    margin-bottom: 20px;
+}
+
+/* -------------------------------------- ici grand parents */
+.image-grand_parent {
+    text-align: center;
+    margin-bottom: 20px;
+    display: inline-block;
+    margin: 0 10px;
+}
+
+.image-grand_parent span {
+    margin: 0 10px;
+}
+
+.image-grand_parent a {
+    display: inline-block;
+    margin: 0 10px;
+    max-width: 35%; /* Définir une largeur maximale */
+}
+
+.image-grand_parent img {
+    width: 80%; /* Faire en sorte que l'image occupe toute la largeur de son conteneur */
+    height: auto; /* Pour maintenir le ratio d'aspect */
+}
+
+/* -------------------------------------- ici */
+.image-parents {
+    text-align: center;
+    margin-bottom: 2px;
+    display: inline-block;
+    margin: 0 2px;
+}
+
+.image-parents a {
+    display: inline-block;
+    max-width: 30%; /* Définir une largeur maximale */
+}
+
+.image-parents img {
+    width: 90%; /* Faire en sorte que l'image occupe toute la largeur de son conteneur */
+    height: auto; /* Pour maintenir le ratio d'aspect */
+}
+
+/* -------------------------------------- ici enfants */
+.image-enfants {
+    text-align: center;
+    margin-bottom: 2px;
+    display: inline-block;
+    margin: 0 2px;
+}
+
+.image-enfants a {
+    display: inline-block;
+    max-width: 30%; /* Définir une largeur maximale */
+}
+
+.image-enfants img {
+    width: 90%; /* Faire en sorte que l'image occupe toute la largeur de son conteneur */
+    height: auto; /* Pour maintenir le ratio d'aspect */
+}
+
+/* Animation pour faire clignoter */
+@keyframes blink {
+    0% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+/* Styles pour les images qui clignotent */
+.image-grand_parent a:hover img,
+.image-parents a:hover img,
+.image-enfants a:hover img {
+    animation: blink 1s infinite; /* Appliquer l'animation au survol */
+}
+
+.abou a {
+    text-align: center;
+    margin-bottom: 20px;
+    margin: 0 10px;
+    max-width: 30%;
+}
